@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "meu-teste-emersaoo" {
-    bucket = "meu-bucket-terras-0800"
+    bucket = var.bucket_01
     tags = {
       "Name" = "Bucket demo terraform"
       "Environment" = var.ambiente_dev
@@ -25,7 +25,7 @@ resource "aws_s3_object" "bem_vindo_1" {
 
 
 resource "aws_s3_bucket" "meu-bucket-copilot-02" {
-    bucket = "meu-bucket-copilot-testes-12345"
+    bucket = var.bucket_02
     tags = {
       "Name" = "Bucket demo copilot"
       "Environment" = "Homologação"
@@ -47,7 +47,7 @@ resource "aws_s3_object" "bem_vindo_2" {
 
 
 resource "aws_s3_bucket" "meu-bucket-copilot-03" {
-    bucket = "meu-bucket-copilot-testes-6789"
+    bucket = var.bucket_03
     tags = {
       "Name" = "Bucket demo copilot"
       "Environment" = "Produção"
